@@ -3,6 +3,7 @@ import './App.css'
 import MainMenu from './pages/MainMenu'
 import {Routes, Route} from "react-router-dom"
 import ConquerYourFears from './pages/ConquerYourFears'
+import FearsPage from './pages/FearsPage'
 
 
 
@@ -22,10 +23,14 @@ function App() {
 
   return (
     <>
-    <Routes>
-      <Route path="/" element={<MainMenu isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
-      <Route path="/conquer" element={<ConquerYourFears />}/>
-    </Routes>
+    <AuthContextProvider>
+      <Routes>
+        <Route path="/" element={<MainMenu isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
+        <Route path="/conquer" element={<ConquerYourFears />}/>
+        <Route path="/fearpage" element={<FearsPage />} />
+      </Routes>
+    </AuthContextProvider>
+    
     </>
   )
 }

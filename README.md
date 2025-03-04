@@ -255,6 +255,59 @@ Part 2
     - It would be best to have the full 'Conquer Your Fears' feature to be completed by this time. You already have guidance and knowledge to get to that point.
         - Be sure to contact Peter and/or peers if you have any troubles with this.
 
+## Week 6 Progress
+
+These were the goals that should’ve been completed by this week: 
+
+Figure out how you will structure and store user input, knowing that you will need separate fear/step objects.
+Using my learnings from the React + Firebase tutorial, implement the Firebase setup to my project and make sure that user input is effectively stored into the database.
+It would be best to have the full 'Conquer Your Fears' feature to be completed by this time. You already have guidance and knowledge to get to that point.
+Be sure to contact Peter and/or peers if you have any troubles with this.
+
+I was able to accomplish the following:
+
+I did a rough draft of the database structure.
+
+
+Collection of Fear(s)
+Rating (check if it's low, medium, or high)
+Question 1 string data
+Question 2 string data
+question 3 string data
+Subcollection of step(s)
+Rating (check if it's low, medium, or high)
+Question 1 string data
+Question 2 string data
+ Question 3 string data
+IsComplete boolean
+isComplete boolean
+I am working on setting up Google authentication for my project.
+I got Firebase set up for my project.
+
+Because of my surgery last week, I was out of action from Tuesday to Friday. Therefore, I am fairly behind on this. Not sure if there would be extensions b/c this is still a 10 week project. If anything, I’ll bite the bullet and just do as much work as I can for the next 3-4 weeks.
+
+I am also running into GitHub problems……..ugh.
+
+Week 7 Goals
+
+Here are the goals to complete by next week
+
+Get that part (should’ve been done by milestone 2) done. 
+Communicate with Peter and/or the other mentor that can possibly help you.
+You work when you have down time.
+Get github fixed. If not by Wednesday, talk to Anthony. He’s free on thursdays. 
+
+## Week 7 Progress
+
+These were the goals to complete by this week:
+- Get the Milestone 2 part done.
+- Communicate with Peter and/or the other mentor that can possibly help you.
+- You work when you have down time.
+- Get github fixed.
+I was able to accomplish the following:
+- I got fear and step data to be inputted and established into the database. Now I just need to figure out how to get a user to only see their data, rather than all the data in the database. Once that is finished, and I am able to let the user type in their prompt answers and clear completed steps and fears, the hardest parts of the project will be complete. The "Explore Resources" will pretty much just be static pages of text, and the "Fears Conquered" page will just sort through the user's fears and display which ones are complete. 
+Overall, I ran into software roadblocks (as usual), but considering I don't have other things to catch up on for other classes, this week will be fully dedicated to capstone. I WILL have a working demo to show for the presentation next week.
+
 
 
 

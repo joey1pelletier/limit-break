@@ -133,7 +133,7 @@ useEffect(() => {
 
 
 
-            {newFearPrompt &&
+            {newFearPrompt && userFear === "" &&
                 <div className="new-fear-group">
                 <p className="direction-text">Enter in a fear you want to conquer. Your journey starts here.</p>
                 <div className="white-button">
@@ -142,7 +142,7 @@ useEffect(() => {
             </div>
             }
 
-            { !newFearPrompt &&
+            { !newFearPrompt && !promptComplete &&
                 <div className="new-fear-questions">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="fear" className="direction-text">Type in the fear you want to conquer.</label>
@@ -170,14 +170,14 @@ useEffect(() => {
                             </label>
                         </div>
 
-            {userSteps.map((step, index) => (
-                <StepPrompt
-                    key={step.id}
-                    index={index}
-                    step={step}
-                    updateStep={updateStep}
-                />
-            ))}
+                        {userSteps.map((step, index) => (
+                            <StepPrompt
+                                key={step.id}
+                                index={index}
+                                step={step}
+                                updateStep={updateStep}
+                            />
+                        ))}
                         
                         <label htmlFor="fear" className="direction-text">If you need to prepare for this action, you may add more actions.</label>
                         <div className="white-button">
@@ -195,6 +195,11 @@ useEffect(() => {
 
             }
 
+            { promptComplete && 
+
+            <p className="direction-text">works!!!</p>
+
+            }
             
             
             
