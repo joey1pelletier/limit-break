@@ -308,6 +308,8 @@ I was able to accomplish the following:
 - I got fear and step data to be inputted and established into the database. Now I just need to figure out how to get a user to only see their data, rather than all the data in the database. Once that is finished, and I am able to let the user type in their prompt answers and clear completed steps and fears, the hardest parts of the project will be complete. The "Explore Resources" will pretty much just be static pages of text, and the "Fears Conquered" page will just sort through the user's fears and display which ones are complete. 
 Overall, I ran into software roadblocks (as usual), but considering I don't have other things to catch up on for other classes, this week will be fully dedicated to capstone. I WILL have a working demo to show for the presentation next week.
 
+Oh, and I got feedback from Aileen Pierce. I'll try to setup a meeting with her this week.
+
 
 
 
