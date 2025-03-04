@@ -5,9 +5,11 @@ import { getDocs, collection } from 'firebase/firestore'
 import {useNavigate} from 'react-router-dom'
 import { UserAuth } from '../contexts/AuthContext'
 
+
 const LogIn = () => {
 
-    const { googleSignIn } = UserAuth();
+    const {googleSignIn} = UserAuth();
+    console.log(UserAuth());
 
     const handleGoogleSignIn = async () => {
         try {
@@ -27,3 +29,5 @@ const LogIn = () => {
             </>
         )
 }
+
+export default LogIn;

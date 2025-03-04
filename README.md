@@ -310,6 +310,17 @@ Overall, I ran into software roadblocks (as usual), but considering I don't have
 
 Oh, and I got feedback from Aileen Pierce. I'll try to setup a meeting with her this week.
 
+## Week 8 Goals
+
+These are the goals to complete by next week:
+- Develop "Conquer Your Fears", where you will have a working demo for Expert Presentations next week.
+    - If you are able to get a Zoom meeting with Alieen, work with her for feedback/advice/roadblocks.  
+- Get started on developing the other pages.
+    - "Explore Resources" should be an easy page to develop. It will just be static pages.
+    - "Fears Conquered" will check for any conquered fear for a user in the database.
+
+
+
 
 
 

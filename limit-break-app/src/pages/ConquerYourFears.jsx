@@ -5,8 +5,12 @@ import { db, auth } from "../firebase-config"
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react'
 import StepPrompt from '../components/StepPrompt';
+import { UserAuth } from '../contexts/AuthContext';
+
+
 
 function ConquerYourFears() {
+    const { user } = UserAuth();
     const [newFearPrompt, toggleNewFearPrompt] = useState(true);
     const [promptComplete, setPromptComplete] = useState(false);
     const [userFear, setUserFear] = useState("");
@@ -68,7 +72,8 @@ useEffect(() => {
                 q2_answer: fearQ2Data,
                 q3_answer: fearQ3Data,
                 isComplete: false,
-                createdAt: new Date()
+                createdAt: new Date(),
+                user_id: user.displayName,
             });
     
             console.log("Fear document created with ID: ", fearRef.id);
@@ -197,7 +202,7 @@ useEffect(() => {
 
             { promptComplete && 
 
-            <p className="direction-text">works!!!</p>
+            <p className="direction-text">works!</p>
 
             }
             

@@ -4,6 +4,7 @@ import MainMenu from './pages/MainMenu'
 import {Routes, Route} from "react-router-dom"
 import ConquerYourFears from './pages/ConquerYourFears'
 import FearsPage from './pages/FearsPage'
+import { AuthContextProvider } from './contexts/AuthContext'
 
 
 

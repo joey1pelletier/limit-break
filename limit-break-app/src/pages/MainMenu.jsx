@@ -4,15 +4,29 @@ import ConquerFear from '../components/ConquerFear'
 import ExploreResources from '../components/ExploreResources'
 import FearsConquered from '../components/FearsConquered'
 import { Link } from "react-router-dom"
-import Login from './Login'
-//import { auth } from './firebase-config'
-function MainMenu({isAuth, setIsAuth}) {
-    if (!isAuth) {
-      return <Login setIsAuth={setIsAuth}/>;
+import LogIn from './LogIn'
+import {UserAuth} from '../contexts/AuthContext'
+
+function MainMenu() {
+
+    const {user, logOut} = UserAuth();
+
+    const handleSignOut = async () => {
+        try {
+          await logOut()
+        } catch (error) {
+          console.log(error);
+        }
+    }
+
+    console.log(user);
+    if (!user) {
+      return <LogIn />;
     } 
       return (
         <>
       <h1>LIMIT <span className="red-break">BREAK</span></h1>
+      <p className="direction-text">{user.displayName}</p>
       <div className="main-menu">
         <p className="motiv-text">FACE THE DAY WITH COURAGE AND PRIDE.</p>
         <div className="main-buttons">
@@ -30,6 +44,7 @@ function MainMenu({isAuth, setIsAuth}) {
           <div className="conquered-button">
             <FearsConquered />
           </div>
+          <button className="white-button" onClick={handleSignOut}>Sign Out</button>
           
         </div>
       </div>
