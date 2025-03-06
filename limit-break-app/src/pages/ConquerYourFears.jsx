@@ -73,7 +73,7 @@ useEffect(() => {
                 q3_answer: fearQ3Data,
                 isComplete: false,
                 createdAt: new Date(),
-                user_id: user.displayName,
+                user_id: user.uid,
             });
     
             console.log("Fear document created with ID: ", fearRef.id);
