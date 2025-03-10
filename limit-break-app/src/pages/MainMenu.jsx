@@ -4,8 +4,9 @@ import ConquerFear from '../components/ConquerFear'
 import ExploreResources from '../components/ExploreResources'
 import FearsConquered from '../components/FearsConquered'
 import { Link } from "react-router-dom"
-import LogIn from './LogIn'
+
 import {UserAuth} from '../contexts/AuthContext'
+import LogIn from './Login'
 
 function MainMenu() {
 
@@ -21,7 +22,7 @@ function MainMenu() {
 
     console.log(user);
     if (!user) {
-      return <LogIn />;
+      return <LogIn />
     } 
       return (
         <>

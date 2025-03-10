@@ -10,7 +10,7 @@ import { AuthContextProvider } from './contexts/AuthContext'
 
 function App() {
   
-  const [isAuth, setIsAuth] = useState(false);
+  //const [isAuth, setIsAuth] = useState(false);
 
   /*useEffect(() => {
     if (localStorage.getItem('isAuth')) {
@@ -26,7 +26,7 @@ function App() {
     <>
     <AuthContextProvider>
       <Routes>
-        <Route path="/" element={<MainMenu isAuth={isAuth} setIsAuth={setIsAuth}/>}/>
+        <Route path="/" element={<MainMenu />}/>
         <Route path="/conquer" element={<ConquerYourFears />}/>
         <Route path="/fearpage" element={<FearsPage />} />
       </Routes>
