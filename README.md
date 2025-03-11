@@ -319,6 +319,23 @@ These are the goals to complete by next week:
     - "Explore Resources" should be an easy page to develop. It will just be static pages.
     - "Fears Conquered" will check for any conquered fear for a user in the database.
 
+## Week 8 Progress
+
+These were the goals to complete by this week:
+
+- Develop "Conquer Your Fears", where you will have a working demo for Expert Presentations next week.
+    - If you are able to get a Zoom meeting with Alieen, work with her for feedback/advice/roadblocks.  
+- Get started on developing the other pages.
+    - "Explore Resources" should be an easy page to develop. It will just be static pages.
+    - "Fears Conquered" will check for any conquered fear for a user in the database.
+
+I was able to accomplish the following:
+- I have a working demo to show what I have done so far.
+- I worked with Aileen towards any additional UI changes and implementations of react code/components.
+
+I integrated feedback by applying what Aileen was talking about in regards of react components, and applied it to the real-time update (React and Firebase) of user input. I will keep her other feedback in mind for when I finish the project.
+
+Developing the real-time update of user input inside of React and Firebase was a challenge, but that specific challenge is the biggest, longest, and most essential part of this project. With that out of the way, I feel better about completing this project on-time.
 
 
 
