@@ -1,6 +1,7 @@
+
 import '../App.css';
 import { useEffect, useState } from "react";
-import { getDocs, collection, query, where } from 'firebase/firestore';
+import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase-config';
 import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
@@ -10,54 +11,49 @@ function FearsPage() {
     const { user } = UserAuth();
     const [showStepInfo, setShowStepInfo] = useState(false);
     const [selectedStep, setSelectedStep] = useState(null);
+    const [selectedFearId, setSelectedFearId] = useState(null);
 
     useEffect(() => {
-        const getData = async () => {
-            if (!user?.uid) {
-                console.log("user not found");
-                return;
-            }
-            try {
-                console.log(user.uid);
-                const data_ref = collection(db, "fears");
-                const user_query = query(data_ref, where('user_id', "==", user.uid));
-                const query_snapshot = await getDocs(user_query);
+        if (!user?.uid) {
+            console.log("User not found");
+            return;
+        }
 
-                const fears_and_steps_list = await Promise.all(
-                    query_snapshot.docs.map(async (doc) => {
-                        const fear_data = { id: doc.id, ...doc.data(), steps: [] };
+        const data_ref = collection(db, "fears");
+        const user_query = query(data_ref, where('user_id', "==", user.uid));
 
-                        const subdata_ref = collection(db, "fears", fear_data.id, "steps");
-                        const subdata_snapshot = await getDocs(subdata_ref);
-                        fear_data.steps = subdata_snapshot.docs.map((stepDoc) => ({
-                            id: stepDoc.id,
-                            ...stepDoc.data(),
-                        }));
+        const unsubscribe = onSnapshot(user_query, (query_snapshot) => {
+            const fears_list = [];
 
-                        return fear_data;
-                    })
-                );
+            query_snapshot.forEach((doc) => {
+                const fear_data = { id: doc.id, ...doc.data(), steps: [] };
+                fears_list.push(fear_data);
+                const subdata_ref = collection(db, "fears", fear_data.id, "steps");
+                onSnapshot(subdata_ref, (subdata_snapshot) => {
+                    fear_data.steps = subdata_snapshot.docs.map((stepDoc) => ({
+                        id: stepDoc.id,
+                        ...stepDoc.data(),
+                    }));
+                    setData([...fears_list]);
+                });
+            });
 
-                console.log(fears_and_steps_list);
-                setData(fears_and_steps_list);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+            setData(fears_list);
+        });
 
-        getData();
+        return () => unsubscribe();
+
     }, [user]);
 
-    const handleStepClick = (step) => {
+    const handleStepClick = (step, fearId) => {
         setSelectedStep(step);
+        setSelectedFearId(fearId);
         setShowStepInfo(true);
-    };
+    }; 
 
     return (
-        <div>
-            <h1>LIMIT BREAK</h1>
-            
-
+        <div className="main-conquer-content">
+            <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
             {!showStepInfo ? (
                 <div>
                     <p className="direction-text">Select a fear/step to adjust confidence ratings and answer preparation questions.</p>
@@ -68,7 +64,7 @@ function FearsPage() {
                                 <ul>
                                     {fear.steps.map((step) => (
                                         <li key={step.id}>
-                                            <button className="step-button" onClick={() => handleStepClick(step)}>
+                                            <button className="step-button" onClick={() => handleStepClick(step, fear.id)}>
                                                 {step.text}, {step.stepLevel}
                                             </button>
                                         </li>
@@ -80,7 +76,7 @@ function FearsPage() {
                 </div>
             ) : (
                 <div>
-                    {selectedStep && (
+                    {selectedStep && selectedFearId && (
                         <StepInfo
                             id={selectedStep.id}
                             name={selectedStep.text}
@@ -88,6 +84,8 @@ function FearsPage() {
                             q2={selectedStep.q2}
                             q3={selectedStep.q3}
                             isComplete={selectedStep.isComplete}
+                            userId={user.uid}
+                            fearId={selectedFearId}
                         />
                     )}
 
