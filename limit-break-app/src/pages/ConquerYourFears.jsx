@@ -27,6 +27,16 @@ function ConquerYourFears() {
     }
 ]);
 
+let navigate = useNavigate();
+
+useEffect(() => {
+
+    
+    if (promptComplete) {
+        navigate("/fearpage");
+    }
+}, [promptComplete, navigate]);
+
 useEffect(() => {
     console.log("promptComplete updated: ", promptComplete);
 }, [promptComplete]);
@@ -60,8 +70,6 @@ useEffect(() => {
     const fear_doc = doc(fear_collection, "fearId");
     //const step_collection = collection(fear_doc, "steps");
 
-
-    let navigate = useNavigate();
 
     const createFear = async () => {
         try {
@@ -197,12 +205,6 @@ useEffect(() => {
                 </div>
                 
                 
-
-            }
-
-            { promptComplete && 
-
-            <p className="direction-text">works!</p>
 
             }
             
