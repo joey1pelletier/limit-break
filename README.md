@@ -337,6 +337,29 @@ I integrated feedback by applying what Aileen was talking about in regards of re
 
 Developing the real-time update of user input inside of React and Firebase was a challenge, but that specific challenge is the biggest, longest, and most essential part of this project. With that out of the way, I feel better about completing this project on-time.
 
+## Expert Review Feedback
+
+The experts reviewing my presentation gave me the following advice:
+
+- Rishi: great that it works; how long ago was this and have you been able to use it yet yourself? (this suggests that you should start using it ASAP).
+
+- Krithik: what were the user tests for?
+
+- Suibi: fear is something very private -- so how do you imagine getting others to engage with your project?
+
+Here are my thoughts on the advice:
+- I will be sure to complete the feature that allows a user to complete fears once they feel they received a high confidence rating. Once that's done, then I can use the app to my own potential and use it when it comes to facing any fears/challenges.
+- The user tests were for app flow and the design process. However, at this point, I would need to conduct tests for myself and see how benefitial it is for completing my personal goals (in this case, conquering fears/challenges).
+- In terms of having others engage with my project, I could do some research on how I can make the data more secure through Firebase or other means. Could be a good stretch goal, but the main project should be priority to work on and finish. If time wasn't a huge constraint, then I'd be more than happy to figure that problem out.
+
+## Week 9 Goals
+
+Here are the goals that should be accomplished by next week:
+- Add in the feature where the users can complete fears, and have them added to the "Fears Conquered" page. Also add the "Tutorial" part to "Conquer Your Fears"
+- Perform more CSS adjustments to match the Figma prototype.
+- Work on the navbar. Have the user be able to navigate to different parts of the app without relying on back-swiping.
+
+
 
 
 
