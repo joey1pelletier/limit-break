@@ -136,9 +136,9 @@ h1 {
 
 .text-input {
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.4em;
     width: 80vw;
-    height: 15vh;
+    height: 25vh;
     background-color: #070707;
     color: white;
     outline: none;
