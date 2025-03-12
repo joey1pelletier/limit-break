@@ -5,7 +5,7 @@ import ExploreResources from '../components/ExploreResources'
 import FearsConquered from '../components/FearsConquered'
 import { Link } from "react-router-dom"
 import {UserAuth} from '../contexts/AuthContext'
-import LogIn from './Login'
+import LogIn from './LogIn'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../firebase-config';
 import FearsPage from './FearsPage'
