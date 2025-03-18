@@ -371,8 +371,25 @@ Here are the goals that should've been accomplished by this week:
     - I thought of design decisions (particularly the complete fear/step part) and coded them, but still need to do CSS adjustments. 
     - I still need to work on the navbar, but it should just involve a useState that pops up a Navbar component. Again, shouldn't be a hard thing to do.
 
-- A bunch of things and life stuff came up last week, so I didn't get as many things done, but I am still at a good pace for getting the project done even before spring break b/c all of the hard react/firebase stuff is out of the way.
-- I also tested the app by working on a fear that I want to conquer. So far, although it's not a magical tool that'll conquer all my fears, it gave me better insight on how to conquer them. The journaling via answering the prompt questions allowed me to think about stuff more and cleared up anxieties in my head. I found out that working on multiple fears is beneficial, so I plan on adding that feature as well (the page I have for the fear setup already adds fears/steps to the database, just need to add a link to it).
+- A bunch of things and life stuff came up last week, so I didn't get as many things done. Even though the hardest part of the project (real-time UI and database update) is complete, I'll still need to sprint this out ASAP, and not depend on getting it done right after spring break. That way I can guarantee I have a finished project by then.
+- Here's the following I still need to get done:
+    - Add tutorial for FearPage.jsx
+    - Adjust css for FearPage.jsx. Adjust color pallete.
+    - Position the back-button in FearInfo and StepInfo.jsx
+    - make fears show up on 'Fears Conquered' page
+    - Make completed fear and its steps disappear from FearPage.jsx
+    - Add hamburger menu navbar (create as jsx component)
+    - Add static pages for 'Explore Resources'
+    - Add info for emergency pop-up (scrapping pdf feature...it will now be a stretch goal)
+        -   Lifeline and Helpline numbers
+        -   Link to CU Boulder CAPS
+        - Do additional research on what other apps have for an emergency feature
+    - Make LogIn.jsx a well-designed page (no more ugly sign in button)
+    - Position sign-out and display name better on Main Menu
+
+
+- I also tested the app by working on a fear that I want to conquer. So far, although it's not a magical tool that'll conquer all my fears, it gave me better insight on how to conquer them. The journaling via answering the prompt questions allowed me to think about stuff more and cleared up anxieties in my head. I found out that working on multiple fears is beneficial, so I plan on adding that feature as well (the page I have for the fear setup already adds fears/steps to the database, just need to add a link to it). That feedback (from myself) will need to be implemented ASAP.
+- I learned that I will need to optimize my time management for this project for the next 2 weeks. I should put in more than 12 hours a week, considering we are now in crunch time. I need to treat the uncompleted things as a strict checklist.  
 
 
 
