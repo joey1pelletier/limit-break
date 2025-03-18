@@ -3,78 +3,57 @@ import { useState, useEffect } from 'react';
 import { doc, updateDoc, getDoc } from 'firebase/firestore';
 import { db } from "../firebase-config"; 
 
-function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) {
+function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
     const [selectedRating, setSelectedRating] = useState(rating);
-    const [stepQ1Answer, setStepQ1Answer] = useState(q1);
-    const [stepQ2Answer, setStepQ2Answer] = useState(q2);
-    const [stepQ3Answer, setStepQ3Answer] = useState(q3);
-    const [isStepComplete, setIsStepComplete] = useState(isComplete);
+    const [fearQ1Answer, setFearQ1Answer] = useState(q1);
+    const [fearQ2Answer, setFearQ2Answer] = useState(q2);
+    const [fearQ3Answer, setFearQ3Answer] = useState(q3);
+    const [isFearComplete, setIsFearComplete] = useState(isComplete);
 
     useEffect(() => {
-        const fetchStepData = async () => {
+        const fetchFearData = async () => {
             try {
-                const stepRef = doc(db, 'fears', fearId, 'steps', id);
-                const step_snapshot = await getDoc(stepRef);
-                if (step_snapshot.exists()) {
-                    const data = step_snapshot.data();
-                    setSelectedRating(data.stepLevel || rating);
-                    setStepQ1Answer(data.q1_answer || q1);
-                    setStepQ2Answer(data.q2_answer || q2);
-                    setStepQ3Answer(data.q3_answer || q3);
-                    setIsStepComplete(data.isComplete || isComplete);
+                const fearRef = doc(db, 'fears', id);
+                const fear_snapshot = await getDoc(fearRef);
+                if (fear_snapshot.exists()) {
+                    const data = fear_snapshot.data();
+                    setSelectedRating(data.rating || rating);
+                    setFearQ1Answer(data.q1_answer || q1);
+                    setFearQ2Answer(data.q2_answer || q2);
+                    setFearQ3Answer(data.q3_answer || q3);
+                    setIsFearComplete(data.isComplete || isComplete);
                 }
             } catch (error) {
                 console.error("Error fetching step data: ", error);
             }
         };
 
-        fetchStepData();
-    }, [id, fearId, rating, q1, q2, q3]);
+        fetchFearData();
+    }, [id, rating, q1, q2, q3]);
 
     const handleConfidenceChange = async (e) => {
         const newRating = e.target.value;
         setSelectedRating(newRating);     
 
         try {
-            const stepRef = doc(db, 'fears', fearId, 'steps', id); 
+            const fearRef = doc(db, 'fears', id); 
             console.log(id);
-            console.log(fearId);
-            await updateDoc(stepRef, {
-                stepLevel: newRating,
+            await updateDoc(fearRef, {
+                rating: newRating,
             });
-            console.log(`Step ${id} rating updated to ${newRating}`);
+            console.log(`Fear ${id} rating updated to ${newRating}`);
         } catch (error) {
-            console.error("Error updating step rating: ", error);
+            console.error("Error updating fear rating: ", error);
         }
-    };
-
-    const handleCompleteChange = async (e) => {
-        
-        e.preventDefault();
-
-        if (confirm("Are you sure you have completed this step?") === true) {
-            try {
-                const stepRef = doc(db, 'fears', fearId, 'steps', id); 
-                await updateDoc(stepRef, {
-                    isComplete: true,
-                });
-                setIsStepComplete(true);
-                console.log(`Step ${id} setComplete updated to ${isStepComplete}`)
-    
-            } catch (error) {
-                console.error("Error updating complete", error);
-            }
-        }
-         return;
     };
 
     const handleQ1Change = async (e) => {
         const curr_q1_answer = e.target.value;
-        setStepQ1Answer(curr_q1_answer);
+        setFearQ1Answer(curr_q1_answer);
 
         try {
-            const stepRef = doc(db, 'fears', fearId, 'steps', id);
-            await updateDoc(stepRef, {
+            const fearRef = doc(db, 'fears', id);
+            await updateDoc(fearRef, {
                 q1_answer: curr_q1_answer,
             });
         } catch (error) {
@@ -84,11 +63,11 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
 
     const handleQ2Change = async (e) => {
         const curr_q2_answer = e.target.value;
-        setStepQ2Answer(curr_q2_answer);
+        setFearQ2Answer(curr_q2_answer);
 
         try {
-            const stepRef = doc(db, 'fears', fearId, 'steps', id);
-            await updateDoc(stepRef, {
+            const fearRef = doc(db, 'fears', id);
+            await updateDoc(fearRef, {
                 q2_answer: curr_q2_answer,
             });
         } catch (error) {
@@ -98,11 +77,11 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
 
     const handleQ3Change = async (e) => {
         const curr_q3_answer = e.target.value;
-        setStepQ3Answer(curr_q3_answer);
+        setFearQ3Answer(curr_q3_answer);
 
         try {
-            const stepRef = doc(db, 'fears', fearId, 'steps', id);
-            await updateDoc(stepRef, {
+            const fearRef = doc(db, 'fears', id);
+            await updateDoc(fearRef, {
                 q3_answer: curr_q3_answer,
             });
         } catch (error) {
@@ -120,7 +99,7 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                         <label className="radio-label">
                             <input
                                 type="radio"
-                                name={`stepConfidence-${id}`}
+                                name={`fearConfidence-${id}`}
                                 value="low"
                                 onChange={handleConfidenceChange}
                                 checked={selectedRating === "low"}
@@ -131,7 +110,7 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                         <label className="radio-label">
                             <input
                                 type="radio"
-                                name={`stepConfidence-${id}`}
+                                name={`fearConfidence-${id}`}
                                 value="medium"
                                 onChange={handleConfidenceChange}
                                 checked={selectedRating === "medium"}
@@ -142,7 +121,7 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                         <label className="radio-label">
                             <input
                                 type="radio"
-                                name={`stepConfidence-${id}`}
+                                name={`fearConfidence-${id}`}
                                 value="high"
                                 onChange={handleConfidenceChange}
                                 checked={selectedRating === "high"}
@@ -150,15 +129,13 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                             <span className="option">high</span>
                         </label>
                     </div>
-                    <button type="button" disabled={selectedRating === "low" || selectedRating === "medium" || isStepComplete === true} onClick={handleCompleteChange}>
-                        {isStepComplete ? "STEP COMPLETED!" : "COMPLETE STEP"}
-                    </button>
-                    <label htmlFor="q1" className="direction-text">Describe any anxieties of completing this step.</label>
+                    <button>COMPLETE FEAR</button>
+                    <label htmlFor="q1" className="direction-text">Describe any anxieties of completing this fear.</label>
                     <div className="example-text">Example: I feel scared about how high up I am for the fear of heights.</div>
                     <textarea
                         placeholder="Answer prompt here..."
                         className="text-input"
-                        value={stepQ1Answer}
+                        value={fearQ1Answer}
                         onChange={handleQ1Change}
                     >
                     </textarea>
@@ -167,16 +144,16 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                     <textarea
                         placeholder="Answer prompt here..."
                         className="text-input"
-                        value={stepQ2Answer}
+                        value={fearQ2Answer}
                         onChange={handleQ2Change}
                     >
                     </textarea>
-                    <label htmlFor="q3" className="direction-text">How will you <strong>prepare</strong> to conquer this step?</label>
+                    <label htmlFor="q3" className="direction-text">How will you <strong>prepare</strong> to conquer this fear?</label>
                     <div className="example-text">Example: I know I'll be scared when looking down from the top of the chair, but I will do everything I can to not let the fear get to me.</div>
                     <textarea
                         placeholder="Answer prompt here..."
                         className="text-input"
-                        value={stepQ3Answer}
+                        value={fearQ3Answer}
                         onChange={handleQ3Change}
                     >
                     </textarea>
@@ -186,4 +163,4 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
     );
 }
 
-export default StepInfo;
+export default FearInfo;

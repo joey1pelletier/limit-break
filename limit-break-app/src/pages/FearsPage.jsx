@@ -5,13 +5,17 @@ import { collection, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from '../firebase-config';
 import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
+import FearInfo from '../components/FearInfo';
 
 function FearsPage() {
     const [data, setData] = useState([]);
     const { user } = UserAuth();
+    const [showFearInfo, setShowFearInfo] = useState(false);
     const [showStepInfo, setShowStepInfo] = useState(false);
     const [selectedStep, setSelectedStep] = useState(null);
+    const [selectedFear, setSelectedFear] = useState(null);
     const [selectedFearId, setSelectedFearId] = useState(null);
+
 
     useEffect(() => {
         if (!user?.uid) {
@@ -49,49 +53,73 @@ function FearsPage() {
         setSelectedStep(step);
         setSelectedFearId(fearId);
         setShowStepInfo(true);
+    };
+    
+    const handleFearClick = (fear, fearId) => {
+        setSelectedFear(fear);
+        setSelectedFearId(fearId);
+        setShowFearInfo(true);
     }; 
+
+
 
     return (
         <div className="main-conquer-content">
             <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
-            {!showStepInfo ? (
-                <div>
-                    <p className="direction-text">Select a fear/step to adjust confidence ratings and answer preparation questions.</p>
-                    {data.map((fear) => (
-                        <ul key={fear.id}>
-                            <li>
-                                <button className="fear-button">{fear.fear}, {fear.rating}</button>
-                                <ul>
-                                    {fear.steps.map((step) => (
-                                        <li key={step.id}>
-                                            <button className="step-button" onClick={() => handleStepClick(step, fear.id)}>
-                                                {step.text}, {step.stepLevel}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
+            {showStepInfo ? (
+    <div>
+        {selectedStep && selectedFearId && (
+            <StepInfo
+                id={selectedStep.id}
+                name={selectedStep.text}
+                q1={selectedStep.q1}
+                q2={selectedStep.q2}
+                q3={selectedStep.q3}
+                isComplete={selectedStep.isComplete}
+                userId={user.uid}
+                fearId={selectedFearId}
+            />
+        )}
+        <button onClick={() => setShowStepInfo(false)}>Back</button>
+    </div>
+) : selectedFear && selectedFearId ? (
+    <div>
+        <FearInfo
+            id={selectedFear.id}
+            name={selectedFear.fear}
+            q1={selectedFear.q1}
+            q2={selectedFear.q2}
+            q3={selectedFear.q3}
+            isComplete={selectedFear.isComplete}
+            userId={user.uid}
+        />
+        <button onClick={() => setSelectedFear(null)}>Back</button>
+    </div>
+) : (
+    <div>
+        <p className="direction-text">
+            Select a fear/step to adjust confidence ratings and answer preparation questions.
+        </p>
+        {data.map((fear) => (
+            <ul key={fear.id}>
+                <li>
+                    <button className="fear-button" onClick={() => handleFearClick(fear, fear.id)}>
+                        FEAR: {fear.fear}, {fear.rating}
+                    </button>
+                    <ul>
+                        {fear.steps.map((step) => (
+                            <li key={step.id}>
+                                <button className="step-button" onClick={() => handleStepClick(step, fear.id)}>
+                                    STEP: {step.text}, {step.stepLevel}, {step.isComplete ? "complete" : "incomplete"}
+                                </button>
                             </li>
-                        </ul>
-                    ))}
-                </div>
-            ) : (
-                <div>
-                    {selectedStep && selectedFearId && (
-                        <StepInfo
-                            id={selectedStep.id}
-                            name={selectedStep.text}
-                            q1={selectedStep.q1}
-                            q2={selectedStep.q2}
-                            q3={selectedStep.q3}
-                            isComplete={selectedStep.isComplete}
-                            userId={user.uid}
-                            fearId={selectedFearId}
-                        />
-                    )}
-
-                    <button onClick={() => setShowStepInfo(false)}>Back</button>
-                </div>
-            )}
+                        ))}
+                    </ul>
+                </li>
+            </ul>
+        ))}
+    </div>
+)}
         </div>
     );
 }
