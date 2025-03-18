@@ -47,6 +47,26 @@ function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
         }
     };
 
+    const handleCompleteChange = async (e) => {
+        
+        e.preventDefault();
+
+        if (confirm("Are you sure you have completed this fear") === true) {
+            try {
+                const fearRef = doc(db, 'fears', fearId); 
+                await updateDoc(fearRef, {
+                    isComplete: true,
+                });
+                setIsFearComplete(true);
+                console.log(`fear ${fearId} setComplete updated to ${isFearComplete}`)
+    
+            } catch (error) {
+                console.error("Error updating complete", error);
+            }
+        }
+         return;
+    };
+
     const handleQ1Change = async (e) => {
         const curr_q1_answer = e.target.value;
         setFearQ1Answer(curr_q1_answer);
@@ -129,7 +149,9 @@ function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
                             <span className="option">high</span>
                         </label>
                     </div>
-                    <button>COMPLETE FEAR</button>
+                    <button type="button" disabled={selectedRating === "low" || selectedRating === "medium"} onClick={handleCompleteChange}>
+                        COMPLETE FEAR
+                    </button>
                     <label htmlFor="q1" className="direction-text">Describe any anxieties of completing this fear.</label>
                     <div className="example-text">Example: I feel scared about how high up I am for the fear of heights.</div>
                     <textarea

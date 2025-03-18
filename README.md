@@ -359,6 +359,22 @@ Here are the goals that should be accomplished by next week:
 - Perform more CSS adjustments to match the Figma prototype.
 - Work on the navbar. Have the user be able to navigate to different parts of the app without relying on back-swiping.
 
+# Week 9 Progress
+
+Here are the goals that should've been accomplished by this week:
+- Add in the feature where the users can complete fears, and have them added to the "Fears Conquered" page. Also add the "Tutorial" part to "Conquer Your Fears"
+- Perform more CSS adjustments to match the Figma prototype.
+- Work on the navbar. Have the user be able to navigate to different parts of the app without relying on back-swiping.
+
+- Here's what I've done:
+    - I added the feature where users can mark their fear/step as complete. I still need to do the Fears Conquered page but that should be similar to how I query the fear/steps on Conquer Your Fears. Just need to show fear/steps that are marked as 'complete' on the page. Hopefully shouldn't be a hard thing to do.
+    - I thought of design decisions (particularly the complete fear/step part) and coded them, but still need to do CSS adjustments. 
+    - I still need to work on the navbar, but it should just involve a useState that pops up a Navbar component. Again, shouldn't be a hard thing to do.
+
+- A bunch of things and life stuff came up last week, so I didn't get as many things done, but I am still at a good pace for getting the project done even before spring break b/c all of the hard react/firebase stuff is out of the way.
+- I also tested the app by working on a fear that I want to conquer. So far, although it's not a magical tool that'll conquer all my fears, it gave me better insight on how to conquer them. The journaling via answering the prompt questions allowed me to think about stuff more and cleared up anxieties in my head. I found out that working on multiple fears is beneficial, so I plan on adding that feature as well (the page I have for the fear setup already adds fears/steps to the database, just need to add a link to it).
+
+
 
 
 
