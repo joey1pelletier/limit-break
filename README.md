@@ -359,7 +359,7 @@ Here are the goals that should be accomplished by next week:
 - Perform more CSS adjustments to match the Figma prototype.
 - Work on the navbar. Have the user be able to navigate to different parts of the app without relying on back-swiping.
 
-# Week 9 Progress
+## Week 9 Progress
 
 Here are the goals that should've been accomplished by this week:
 - Add in the feature where the users can complete fears, and have them added to the "Fears Conquered" page. Also add the "Tutorial" part to "Conquer Your Fears"
@@ -389,7 +389,33 @@ Here are the goals that should've been accomplished by this week:
 
 
 - I also tested the app by working on a fear that I want to conquer. So far, although it's not a magical tool that'll conquer all my fears, it gave me better insight on how to conquer them. The journaling via answering the prompt questions allowed me to think about stuff more and cleared up anxieties in my head. I found out that working on multiple fears is beneficial, so I plan on adding that feature as well (the page I have for the fear setup already adds fears/steps to the database, just need to add a link to it). That feedback (from myself) will need to be implemented ASAP.
-- I learned that I will need to optimize my time management for this project for the next 2 weeks. I should put in more than 12 hours a week, considering we are now in crunch time. I need to treat the uncompleted things as a strict checklist.  
+- I learned that I will need to optimize my time management for this project for the next 2 weeks. I should put in more than 12 hours a week, considering we are now in crunch time. I need to treat the uncompleted things as a strict checklist.
+
+## Week 10 and Spring Break Goals
+
+Here's the following I still need to get done before 100% completion:
+- Add tutorial pop-up for FearPage.jsx
+    -   Static pop-up that explains how to use the Conquer Your Fears feature
+- Adjust css for FearPage.jsx (make it look like Figma prototype). Adjust color pallete.
+- Position the back-button in FearInfo and StepInfo.jsx
+- make fears show up on 'Fears Conquered' page
+- Make completed fear and its steps disappear from FearPage.jsx
+- Add hamburger menu navbar (create as jsx component)
+- Add static pages for 'Explore Resources'
+- Add info for emergency pop-up (scrapping pdf feature...it will now be a stretch goal)
+    -   Lifeline and Helpline numbers
+    -   Link to CU Boulder CAPS
+    - Do additional research on what other apps have for an emergency feature
+- Make LogIn.jsx a well-designed page (no more ugly sign in button)
+- Position sign-out and display name better on Main Menu
+- Any bug fixes and feedback implementations during my experience with app.
+
+- Right now, I feel like I am at 85% completion, considering that the "Conquer Your Fears" part of the app is the whole meat of my project. All the hard react/programming stuff is out of the way, but there are multiple things that will need to be adjusted and finished ASAP. 
+
+- I will manage my time by spending 20+ hours per week on my project, along with making my weekends and spring break blocked off for that until capstone is done. At the latest, Everything from the checklist will need to be completed by March 31st. 
+
+
+
 
 
 
