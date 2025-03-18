@@ -393,6 +393,9 @@ Here are the goals that should've been accomplished by this week:
 
 ## Week 10 and Spring Break Goals
 
+This is the link to my presentation for experts: https://docs.google.com/presentation/d/1LznvlbEwxLnGUGrRGSiV5fDieIsKC4j39M7n4GBWUkw/edit?usp=sharing
+- Any instructor feedback/advice on this presentation is welcome.
+
 Here's the following I still need to get done before 100% completion:
 - Add tutorial pop-up for FearPage.jsx
     -   Static pop-up that explains how to use the Conquer Your Fears feature
