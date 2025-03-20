@@ -32,15 +32,17 @@ function FearsPage() {
 
             query_snapshot.forEach((doc) => {
                 const fear_data = { id: doc.id, ...doc.data(), steps: [] };
-                fears_list.push(fear_data);
-                const subdata_ref = collection(db, "fears", fear_data.id, "steps");
-                onSnapshot(subdata_ref, (subdata_snapshot) => {
-                    fear_data.steps = subdata_snapshot.docs.map((stepDoc) => ({
-                        id: stepDoc.id,
-                        ...stepDoc.data(),
-                    }));
-                    setData([...fears_list]);
-                });
+                if(!fear_data.isComplete) {
+                    fears_list.push(fear_data);
+                    const subdata_ref = collection(db, "fears", fear_data.id, "steps");
+                    onSnapshot(subdata_ref, (subdata_snapshot) => {
+                        fear_data.steps = subdata_snapshot.docs.map((stepDoc) => ({
+                            id: stepDoc.id,
+                            ...stepDoc.data(),
+                        }));
+                        setData([...fears_list]);
+                    });
+                }
             });
 
             setData(fears_list);
