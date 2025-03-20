@@ -145,17 +145,7 @@ useEffect(() => {
             <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
 
 
-
-            {newFearPrompt && userFear === "" &&
-                <div className="new-fear-group">
-                <p className="direction-text">Enter in a fear you want to conquer. Your journey starts here.</p>
-                <div className="white-button">
-                    <button onClick={() => toggleNewFearPrompt(!newFearPrompt)}>+ NEW FEAR</button>
-                </div>
-            </div>
-            }
-
-            { !newFearPrompt && !promptComplete &&
+           
                 <div className="new-fear-questions">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="fear" className="direction-text">Type in the fear you want to conquer.</label>
@@ -206,7 +196,7 @@ useEffect(() => {
                 
                 
 
-            }
+            
             
             
             

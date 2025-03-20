@@ -23,9 +23,7 @@ const LogIn = () => {
         return (
             <>  
                 <h1>LIMIT <span className="red-break">BREAK</span></h1>
-                <div className="login-with-google-btn">
-                    <button onClick={handleGoogleSignIn}>Sign In with Google</button>
-                </div>
+                <button onClick={handleGoogleSignIn} className="login-with-google-btn">Sign In with Google</button>
             </>
         )
 }

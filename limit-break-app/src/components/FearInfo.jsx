@@ -51,14 +51,14 @@ function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
         
         e.preventDefault();
 
-        if (confirm("Are you sure you have completed this fear") === true) {
+        if (confirm("Are you sure you have completed this fear?") === true) {
             try {
-                const fearRef = doc(db, 'fears', fearId); 
+                const fearRef = doc(db, 'fears', id); 
                 await updateDoc(fearRef, {
                     isComplete: true,
                 });
                 setIsFearComplete(true);
-                console.log(`fear ${fearId} setComplete updated to ${isFearComplete}`)
+                console.log(`fear ${id} setComplete updated to ${isFearComplete}`)
     
             } catch (error) {
                 console.error("Error updating complete", error);

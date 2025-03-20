@@ -6,6 +6,7 @@ import { db } from '../firebase-config';
 import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
 import FearInfo from '../components/FearInfo';
+import { Link } from "react-router-dom"
 
 function FearsPage() {
     const [data, setData] = useState([]);
@@ -118,8 +119,16 @@ function FearsPage() {
                 </li>
             </ul>
         ))}
+        <Link to={"/conquer"}>
+            <div className="white-button">
+                <button>+ NEW FEAR</button>
+            </div>
+        </Link>
+         
     </div>
+    
 )}
+       
         </div>
     );
 }

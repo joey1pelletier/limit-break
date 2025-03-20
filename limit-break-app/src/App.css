@@ -48,6 +48,16 @@ button {
     color: black;
 }
 
+.fear-button {
+    width: 70vw;
+    height: 5em;
+}
+
+.step-button {
+    width: 50vw;
+    height: 5em;
+}
+
 .new-fear-button {
     width: 2em;
 }
