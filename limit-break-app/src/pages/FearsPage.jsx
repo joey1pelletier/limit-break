@@ -1,7 +1,7 @@
 
 import '../App.css';
 import { useEffect, useState } from "react";
-import { collection, query, where, onSnapshot } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, orderBy } from 'firebase/firestore';
 import { db } from '../firebase-config';
 import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
@@ -25,7 +25,7 @@ function FearsPage() {
         }
 
         const data_ref = collection(db, "fears");
-        const user_query = query(data_ref, where('user_id', "==", user.uid));
+        const user_query = query(data_ref, where('user_id', "==", user.uid), orderBy('createdAt', 'asc'));
 
         const unsubscribe = onSnapshot(user_query, (query_snapshot) => {
             const fears_list = [];
@@ -106,13 +106,13 @@ function FearsPage() {
         {data.map((fear) => (
             <ul key={fear.id}>
                 <li>
-                    <button className="fear-button" onClick={() => handleFearClick(fear, fear.id)}>
+                    <button className="fear-button" onClick={() => handleFearClick(fear, fear.id)} style={{backgroundColor: fear.color}}>
                         FEAR: {fear.fear}, {fear.rating}
                     </button>
                     <ul>
                         {fear.steps.map((step) => (
                             <li key={step.id}>
-                                <button className="step-button" onClick={() => handleStepClick(step, fear.id)}>
+                                <button className="step-button" onClick={() => handleStepClick(step, fear.id)} style={{color: fear.color}}>
                                     STEP: {step.text}, {step.stepLevel}, {step.isComplete ? "complete" : "incomplete"}
                                 </button>
                             </li>

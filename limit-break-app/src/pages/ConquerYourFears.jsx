@@ -70,6 +70,13 @@ useEffect(() => {
     const fear_doc = doc(fear_collection, "fearId");
     //const step_collection = collection(fear_doc, "steps");
 
+    const getRandomColor = () => {
+        const hue = Math.floor(Math.random() * 360); 
+        const saturation = 70 + Math.floor(Math.random() * 30); 
+        const lightness = 60 + Math.floor(Math.random() * 20); 
+        return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+    };
 
     const createFear = async () => {
         try {
@@ -82,6 +89,7 @@ useEffect(() => {
                 isComplete: false,
                 createdAt: new Date(),
                 user_id: user.uid,
+                color: getRandomColor(),
             });
     
             console.log("Fear document created with ID: ", fearRef.id);
