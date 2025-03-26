@@ -19,7 +19,7 @@ function FearsPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [data, showFearInfo, showStepInfo, selectedFear]); 
+    }, [showFearInfo, showStepInfo, selectedFear]); 
 
     useEffect(() => {
 
