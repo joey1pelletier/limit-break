@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .red-break {
@@ -14,6 +15,7 @@
 body {
     background-color: #070707;
     font-family: "Oswald", sans-serif;
+    position: relative;
 }
 
 .login-center-display {

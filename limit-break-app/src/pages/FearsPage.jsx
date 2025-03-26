@@ -17,8 +17,12 @@ function FearsPage() {
     const [selectedFear, setSelectedFear] = useState(null);
     const [selectedFearId, setSelectedFearId] = useState(null);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [data, showFearInfo, showStepInfo, selectedFear]); 
 
     useEffect(() => {
+
         if (!user?.uid) {
             console.log("User not found");
             return;
@@ -85,7 +89,7 @@ function FearsPage() {
         )}
         <button onClick={() => setShowStepInfo(false)}>Back</button>
     </div>
-) : selectedFear && selectedFearId ? (
+) : selectedFear && selectedFearId && showFearInfo ? (
     <div>
         <FearInfo
             id={selectedFear.id}
@@ -123,7 +127,7 @@ function FearsPage() {
         ))}
         <Link to={"/conquer"}>
             <div className="white-button">
-                <button>+ NEW FEAR</button>
+                <button onClick={() => window.scrollTo(0,0)}>+ NEW FEAR</button>
             </div>
         </Link>
          
