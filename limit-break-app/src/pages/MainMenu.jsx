@@ -9,11 +9,18 @@ import LogIn from './LogIn'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../firebase-config';
 import FearsPage from './FearsPage'
+import NavModal from '../modals/NavModal'
 
 function MainMenu() {
-
+    
     const {user, logOut} = UserAuth();
     const [userData, setUserData] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+
+    const toggleNavModal = () => {
+        setIsNavOpen(!isNavOpen);
+    }
 
     useEffect(() => {
       if (!user?.uid) {
@@ -50,9 +57,20 @@ function MainMenu() {
     } 
       return (
         <>
+        <div className="top-area">
+          <button onClick={toggleNavModal} className="nav-button">
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+          </button>
+          
+        </div>
+        
+        {isNavOpen && <NavModal toggleNavModal={toggleNavModal} />}
+      
+      <div className="main-menu">
       <h1>LIMIT <span className="red-break">BREAK</span></h1>
       <p className="direction-text">{user.displayName}</p>
-      <div className="main-menu">
         <p className="motiv-text">FACE THE DAY WITH COURAGE AND PRIDE.</p>
         <div className="main-buttons">
 

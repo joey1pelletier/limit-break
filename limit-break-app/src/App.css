@@ -8,14 +8,46 @@
     overflow-x: hidden;
 }
 
+#root {
+    height: 100vh;
+}
+
+html {
+    height: 100vh;
+    min-height: 100%;
+    
+}
+
 .red-break {
     color: red;
+}
+
+.nav-button {
+    position: fixed;
+    top: 0;
+    width: 3em;
+    background: none;
+    cursor: pointer;
+    border: 0;
+    height: 3em;
+    margin: 0;
+    margin-left: 0.4em;
+}
+
+.nav-line {
+    display: block;
+    width: 1.5em;
+    height: 0.1em;
+    background-color: white;
+    margin: 0.5em;
 }
 
 body {
     background-color: #070707;
     font-family: "Oswald", sans-serif;
     position: relative;
+    height: 100vh;
+    min-height: 100%;
 }
 
 .login-center-display {
@@ -217,4 +249,27 @@ form {
 
 .google-logo {
     padding-right: 10px;
+}
+
+#nav-modal {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-bar {
+    position: fixed;
+    background-color: grey;
+    width: 40em;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+dialog::backdrop {
+    background-color: rgb(0,0,0,0.7);
 }
