@@ -10,6 +10,7 @@
 
 #root {
     height: 100vh;
+   
 }
 
 html {
@@ -18,8 +19,30 @@ html {
     
 }
 
+.top-area {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 5em;
+    background-color: black;
+}
+
 .red-break {
     color: red;
+}
+
+.heading-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    text-align: left;
+    margin-left: 2em;
+    padding-top: 0.3em;
 }
 
 .nav-button {
@@ -31,7 +54,6 @@ html {
     border: 0;
     height: 3em;
     margin: 0;
-    margin-left: 0.4em;
 }
 
 .nav-line {
@@ -41,6 +63,41 @@ html {
     background-color: white;
     margin: 0.5em;
 }
+
+.nav-links {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a{
+    text-decoration: none;
+}
+
+.nav-links li {
+    font-size: 2em;
+    padding-top:0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 0.5em;
+}
+
+.red-link a {
+    color: red;
+}
+
+.blue-link a {
+    color: #00e5ff;
+}
+
+.green-link a {
+    color: #00FF1E;
+}
+
+
+
+
+
+
 
 body {
     background-color: #070707;
@@ -79,6 +136,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 5em;
 }
 
 button {
@@ -136,24 +194,37 @@ button {
 }
 
 h1 {
+    position: absolute;  
+    top: 45%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
     color: white;
-    padding: 0.4em;
+    text-align: center;
+
 }
 
 .conquer-title {
     color: red;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 .red-break {
     color: red;
 }
 
+.login-title {
+    position: relative;
+    top: 1em;
+    left: 2.7em;
+    transform: translate(-50%, -50%);
+}
+
 .motiv-text {
     color: white;
     font-family:'Open Sans Condensed', sans-serif;
     font-style: italic;
-    padding: 2em;
+    padding: 0.8em;
     font-size: 1.5em;
 }
 
@@ -163,6 +234,7 @@ h1 {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    padding-top: 5em;
 }
 
 .direction-text {
@@ -251,18 +323,12 @@ form {
     padding-right: 10px;
 }
 
-#nav-modal {
-    position: fixed;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
+
 
 .nav-bar {
     position: fixed;
-    background-color: grey;
-    width: 40em;
+    background-color: #232323;
+    width: 30em;
     height: 100vh;
     top: 0;
     left: 0;

@@ -6,10 +6,18 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react'
 import StepPrompt from '../components/StepPrompt';
 import { UserAuth } from '../contexts/AuthContext';
+import NavModal from '../modals/NavModal'
 
 
 
 function ConquerYourFears() {
+
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNavModal = () => {
+        setIsNavOpen(!isNavOpen);
+    }
+
     const { user } = UserAuth();
     const [newFearPrompt, toggleNewFearPrompt] = useState(true);
     const [promptComplete, setPromptComplete] = useState(false);
@@ -148,12 +156,18 @@ useEffect(() => {
 
     return (
         <>
-        
+        <div className="top-area">
+          <button onClick={toggleNavModal} className="nav-button">
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+          </button>
+          <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
+        </div>
+
+        {isNavOpen && <NavModal toggleNavModal={toggleNavModal} />}
+
         <div className="main-conquer-content">
-            <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
-
-
-           
                 <div className="new-fear-questions">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="fear" className="direction-text">Type in the fear you want to conquer.</label>

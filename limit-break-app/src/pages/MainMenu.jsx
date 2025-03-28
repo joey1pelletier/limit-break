@@ -63,13 +63,13 @@ function MainMenu() {
             <span className="nav-line"></span>
             <span className="nav-line"></span>
           </button>
-          
+          <h1 className="heading">LIMIT <span className="red-break">BREAK</span></h1>
         </div>
         
         {isNavOpen && <NavModal toggleNavModal={toggleNavModal} />}
       
       <div className="main-menu">
-      <h1>LIMIT <span className="red-break">BREAK</span></h1>
+      
       <p className="direction-text">{user.displayName}</p>
         <p className="motiv-text">FACE THE DAY WITH COURAGE AND PRIDE.</p>
         <div className="main-buttons">
@@ -80,14 +80,18 @@ function MainMenu() {
                 </div>
             </Link>
           
-
-          <div className="explore-button">
-            <ExploreResources />
-          </div>
-
-          <div className="conquered-button">
-            <FearsConquered />
-          </div>
+          <Link to="/explore-resources">
+                <div className="explore-button">
+                    <ExploreResources />
+                </div>
+          </Link>
+            
+          <Link to="/fears-conquered">
+                <div className="conquered-button">
+                  <FearsConquered />
+                </div>
+          </Link>
+          
           <button className="white-button" onClick={handleSignOut}>Sign Out</button>
           
         </div>

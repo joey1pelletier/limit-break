@@ -7,8 +7,17 @@ import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
 import FearInfo from '../components/FearInfo';
 import { Link } from "react-router-dom"
+import NavModal from '../modals/NavModal'
 
 function FearsPage() {
+
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNavModal = () => {
+        setIsNavOpen(!isNavOpen);
+    }
+
+
     const [data, setData] = useState([]);
     const { user } = UserAuth();
     const [showFearInfo, setShowFearInfo] = useState(false);
@@ -71,8 +80,20 @@ function FearsPage() {
 
 
     return (
+        <>
+        <div className="top-area">
+          <button onClick={toggleNavModal} className="nav-button">
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+            <span className="nav-line"></span>
+          </button>
+          <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
+        </div>
+
+        {isNavOpen && <NavModal toggleNavModal={toggleNavModal} />}
+
         <div className="main-conquer-content">
-            <h1 className="conquer-title">CONQUER YOUR FEARS</h1>
+            
             {showStepInfo ? (
     <div>
         {selectedStep && selectedFearId && (
@@ -136,6 +157,7 @@ function FearsPage() {
 )}
        
         </div>
+        </>
     );
 }
 
