@@ -43,7 +43,11 @@ function NavModal({ toggleNavModal }) {
     return ReactDOM.createPortal(
         <dialog ref={dialogRef} className="nav-bar" onClose={toggleNavModal}>
             <div className="nav-modal-top">
-                <h1 className="heading-nav">LIMIT <span className="red-break">BREAK</span></h1>
+
+                <Link to="/">
+                    <h1 className="heading-nav">LIMIT <span className="red-break">BREAK</span></h1>
+                </Link>
+                    
                 <button onClick={() => {
                 dialogRef.current.close();
                 toggleNavModal();
@@ -72,10 +76,11 @@ function NavModal({ toggleNavModal }) {
                         </Link>
                     </li>
                 </ul>
-               
-                
-
-            </div> 
+            </div>
+            <div className="user-and-signout">
+                <p className="nav-user">User: {user.displayName}</p>
+                <button className="sign-out">Sign out</button>
+            </div>
             
             
         </dialog>,
