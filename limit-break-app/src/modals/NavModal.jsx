@@ -12,6 +12,13 @@ function NavModal({ toggleNavModal }) {
     const {user, logOut} = UserAuth();
     const [userData, setUserData] = useState(false);
 
+    const handleSignOut = async () => {
+        try {
+          await logOut()
+        } catch (error) {
+          console.log(error);
+        }
+    }
 
     useEffect(() => {
         if (dialogRef.current) {
@@ -79,7 +86,10 @@ function NavModal({ toggleNavModal }) {
             </div>
             <div className="user-and-signout">
                 <p className="nav-user">User: {user.displayName}</p>
-                <button className="sign-out">Sign out</button>
+                <Link to="/">
+                    <button className="sign-out" onClick={handleSignOut}>Sign out</button>
+                </Link>
+                
             </div>
             
             

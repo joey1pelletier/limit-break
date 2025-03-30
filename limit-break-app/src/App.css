@@ -8,13 +8,8 @@
     overflow-x: hidden;
 }
 
-#root {
-    height: 100vh;
-   
-}
 
 html {
-    height: 100vh;
     min-height: 100%;
     
 }
@@ -106,7 +101,6 @@ body {
     background-color: #070707;
     font-family: "Oswald", sans-serif;
     position: relative;
-    height: 100vh;
     min-height: 100%;
 }
 
@@ -345,7 +339,7 @@ dialog::backdrop {
 
 .user-and-signout {
     padding-top: 2em;
-    padding-left: 0.4em;
+    padding-left: 0em;
 }
 
 .nav-user {

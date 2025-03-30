@@ -92,8 +92,6 @@ function MainMenu() {
                 </div>
           </Link>
           
-          <button className="white-button" onClick={handleSignOut}>Sign Out</button>
-          
         </div>
       </div>
       
