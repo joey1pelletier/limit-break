@@ -206,6 +206,12 @@ h1 {
     white-space: nowrap;
 }
 
+.conquered-title {
+    color: #00FF1E;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
 .red-break {
     color: red;
 }
@@ -359,4 +365,10 @@ dialog::backdrop {
     border-radius: 0.5em;
     margin-left: 0.5em;
     margin-top: 0.5em;
+}
+
+.is-complete {
+    font-weight: 100;
+    font-size: 0.7em;
+    padding: 0.2em;
 }

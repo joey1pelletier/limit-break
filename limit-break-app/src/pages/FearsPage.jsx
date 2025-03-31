@@ -17,7 +17,6 @@ function FearsPage() {
         setIsNavOpen(!isNavOpen);
     }
 
-
     const [data, setData] = useState([]);
     const { user } = UserAuth();
     const [showFearInfo, setShowFearInfo] = useState(false);
@@ -132,13 +131,17 @@ function FearsPage() {
             <ul key={fear.id}>
                 <li>
                     <button className="fear-button" onClick={() => handleFearClick(fear, fear.id)} style={{backgroundColor: fear.color}}>
-                        FEAR: {fear.fear}, {fear.rating}
+                        <div className="fear-or-step">FEAR: {fear.fear}</div>
                     </button>
                     <ul>
                         {fear.steps.map((step) => (
                             <li key={step.id}>
                                 <button className="step-button" onClick={() => handleStepClick(step, fear.id)} style={{color: fear.color}}>
-                                    STEP: {step.text}, {step.stepLevel}, {step.isComplete ? "complete" : "incomplete"}
+                                        STEP: {step.text}
+                                    <div className="is-complete">
+                                        {step.isComplete ? "Complete!" : "in progress..."}
+                                    </div>
+
                                 </button>
                             </li>
                         ))}

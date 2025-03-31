@@ -204,7 +204,7 @@ useEffect(() => {
                             />
                         ))}
                         
-                        <label htmlFor="fear" className="direction-text">If you need to prepare for this action, you may add more actions.</label>
+                        <label htmlFor="fear" className="direction-text">If you need more preparation, you may add more steps.</label>
                         <div className="white-button">
                             <button onClick={addStep}>ADD NEW STEP</button>
                         </div>
