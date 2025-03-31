@@ -147,8 +147,12 @@ button {
     background-color: #FFFFFF;  
 }
 
-.submit-button {
-    
+button:hover {
+    cursor: pointer;
+}
+
+.new-step {
+    padding: 2em;
 }
 
 button:disabled {
@@ -184,7 +188,22 @@ button:disabled {
     font-size: 1.2em;
     width: 7em;
     height: 7vh;
-    background-color: #ffffff
+    background-color: #ffffff;
+}
+
+.new-step {
+    padding: 0;
+}
+
+.new-step button {
+    font-weight: 500;
+    font-size: 1.2em;
+    width: 7em;
+    height: 7vh;
+    background-color: #ffffff;
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 2em;
 }
 
 .conquer-button button {

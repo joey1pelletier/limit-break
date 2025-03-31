@@ -205,15 +205,13 @@ useEffect(() => {
                         ))}
                         
                         <label htmlFor="fear" className="direction-text">If you need more preparation, you may add more steps.</label>
-                        <div className="white-button">
-                            <button onClick={addStep}>ADD NEW STEP</button>
+                        <div className="new-step">
+                            <button onClick={addStep}>+ NEW STEP</button>
                         </div>
-                        <div className="white-button">
+                        <div>
                             <button type="Submit" onClick={handleSubmit}>SUBMIT</button>
                         </div>
-
                     </form>
-
                 </div>
                 
                 
