@@ -144,6 +144,11 @@ button {
     font-size: 1.5em;
     border-radius: 1em;
     color: black;
+    background-color: #FFFFFF;  
+}
+
+.submit-button {
+    
 }
 
 button:disabled {
@@ -179,6 +184,7 @@ button:disabled {
     font-size: 1.2em;
     width: 7em;
     height: 7vh;
+    background-color: #ffffff
 }
 
 .conquer-button button {
