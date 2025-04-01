@@ -448,6 +448,16 @@ I learned that creating web apps (especially when connecting it to a database) i
 
 The app is deployed here: https://limit-break.vercel.app/
 
+## Week 11 Goals
+These are the goals to complete by next week:
+- Add a 'Remove Fear' option to 'Conquer Your Fears' and 'Fears Conquered' page.
+- Do some ideation on what your documentation/promo website for Limit Break will be. Use AI.
+- Think of quick walkthrough of app for video
+    - This can include a story with a more serious fear with step(s) being entered, followed by entering a comedic fear as well.
+
+As a note, after talking with Annie, you can show this at Expo with a video loop that shows the process and experience of app. If a user wants to, you can allow them to use the app as well (REALLYYYYY disclose that you can see the data they enter, so they should just play around with the app).
+
+
 
 
 
