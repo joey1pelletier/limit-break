@@ -452,7 +452,7 @@ form {
 .nav-bar {
     position: fixed;
     background-color: #232323;
-    width: 30em;
+    width: 25em;
     height: 100vh;
     top: 0;
     left: 0;
@@ -574,5 +574,22 @@ dialog::backdrop {
         padding-left: 3em;
         padding-right: 3em;
         padding-bottom: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links {
+        padding-top: 2em;
+    }
+    .nav-links li {
+        font-size: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+    }
+    .nav-user {
+        font-size: 1.5em;
+    }
+    .sign-out {
+        font-size: 1.3em;
     }
 }
