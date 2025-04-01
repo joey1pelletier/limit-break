@@ -95,7 +95,10 @@ function FearsPage() {
             
             {showStepInfo ? (
     <div>
+        
         {selectedStep && selectedFearId && (
+        <div className="container">
+            <button onClick={() => setShowStepInfo(false)} className="back-button">&#8592; Back</button>   
             <StepInfo
                 id={selectedStep.id}
                 name={selectedStep.text}
@@ -106,8 +109,10 @@ function FearsPage() {
                 userId={user.uid}
                 fearId={selectedFearId}
             />
+        </div>
+            
         )}
-        <button onClick={() => setShowStepInfo(false)}>Back</button>
+        
     </div>
 ) : selectedFear && selectedFearId && showFearInfo ? (
     <div>
@@ -120,7 +125,7 @@ function FearsPage() {
             isComplete={selectedFear.isComplete}
             userId={user.uid}
         />
-        <button onClick={() => setSelectedFear(null)}>Back</button>
+        <button onClick={() => setSelectedFear(null)}>&#8592;</button>
     </div>
 ) : (
     <div>
@@ -139,7 +144,9 @@ function FearsPage() {
                                 <button className="step-button" onClick={() => handleStepClick(step, fear.id)} style={{color: fear.color}}>
                                         STEP: {step.text}
                                     <div className="is-complete">
-                                        {step.isComplete ? "Complete!" : "in progress..."}
+                                        {step.isComplete ? 
+                        
+                                        "Complete!" : "In progress..."}
                                     </div>
 
                                 </button>
