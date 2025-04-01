@@ -314,7 +314,7 @@ h1 {
     border-radius: 0.5em;
     text-align: left;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     resize: none;
 }
 
@@ -462,8 +462,8 @@ dialog::backdrop {
     }
     .fear-step-title {
         font-size: 0.8em;
-        padding-left: 5em;
-        padding-right: 5em;
+        padding-left: 3em;
+        padding-right: 3em;
     
     }
     .direction-text {
