@@ -5,12 +5,19 @@ import { Link } from "react-router-dom"
 import {UserAuth} from '../contexts/AuthContext'
 import { collection, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../firebase-config';
+import EmergencyModal from './EmergencyModal';
 
 
 function NavModal({ toggleNavModal }) {
     const dialogRef = useRef(null);
     const {user, logOut} = UserAuth();
     const [userData, setUserData] = useState(false);
+    const [isEmergencyOpen, setIsEmergencyOpen] = useState(false);
+
+    const toggleEmergencyModal = () => {
+        setIsEmergencyOpen(!isEmergencyOpen);
+    }
+
 
     const handleSignOut = async () => {
         try {
@@ -92,8 +99,10 @@ function NavModal({ toggleNavModal }) {
                 
             </div>
             <div className="emergency-button">
-                <button>EMERGENCY</button>
+                <button onClick={toggleEmergencyModal}>EMERGENCY</button>
             </div>
+
+            {isEmergencyOpen && <EmergencyModal toggleEmergencyModal={toggleEmergencyModal} />}
             
             
         </dialog>,

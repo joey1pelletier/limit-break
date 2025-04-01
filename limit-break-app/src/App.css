@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open Sans Condensed:300');
-
+/* @import url('https://fonts.googleapis.com/css?family=Open Sans Condensed:300'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;400;700&display=swap');
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -29,6 +29,43 @@ a {
     background-color: #070707;
 }
 
+.top-emergency-area {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 5em;
+    background-color: #232323;
+}
+
+.emergency-text-area {
+    margin-top: 6em;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.emergency-text-area p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-size: 1.6em;
+}
+
+.emergency-text-group {
+    padding: 1em;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.not-bold {
+    padding: 0;
+}
+
+
 .red-break {
     color: red;
 }
@@ -52,6 +89,26 @@ a {
     border: 0;
     height: 3em;
     margin: 0;
+}
+
+.exit-button {
+    position: fixed;
+    top: -0.87em;
+    left: 0.1em;
+    width: 1em;
+    background: none;
+    cursor: pointer;
+    border: 0;
+    height: 3em;
+    margin: 0;
+    color: white;
+    font-weight: 300;
+    font-size: 3em;
+    font-family: 'Oswald', sans-serif;
+}
+
+.underline h1 {
+    border-bottom: 1px white solid;
 }
 
 .nav-line {
@@ -403,6 +460,18 @@ form {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+
+.emergency-popup {
+    position: fixed;
+    background-color: #232323;
+    width: 30em;
+    height: 30em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
     flex-direction: column;
 }
 
