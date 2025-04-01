@@ -115,7 +115,8 @@ function FearsPage() {
         
     </div>
 ) : selectedFear && selectedFearId && showFearInfo ? (
-    <div>
+    <div className="container">
+        <button onClick={() => setSelectedFear(null)} className="back-button">&#8592; Back</button>
         <FearInfo
             id={selectedFear.id}
             name={selectedFear.fear}
@@ -125,7 +126,7 @@ function FearsPage() {
             isComplete={selectedFear.isComplete}
             userId={user.uid}
         />
-        <button onClick={() => setSelectedFear(null)}>&#8592;</button>
+        
     </div>
 ) : (
     <div>

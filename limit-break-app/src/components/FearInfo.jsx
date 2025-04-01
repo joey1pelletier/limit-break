@@ -111,7 +111,9 @@ function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
 
     return (
         <>
-            <p className="direction-text">{name}</p>
+            <div className="fear-step-title">
+            <h2>{name}</h2>
+        </div>
             <div className="new-fear-questions">
                 <form>
                     <label htmlFor="confidence" className="direction-text">CONFIDENCE RATING</label>

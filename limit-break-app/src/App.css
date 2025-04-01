@@ -245,6 +245,14 @@ h1 {
     white-space: nowrap;
 }
 
+.resource-title {
+    color: #00e5ff;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+
 .red-break {
     color: red;
 }
@@ -287,6 +295,26 @@ h1 {
     padding: 1em;
     padding-left: 5em;
     padding-right: 5em;
+}
+.step-fear-text {
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2em;
+    padding-top: 1em;
+}
+
+.emergency-button {
+    display: flex;
+    justify-content: flex-start;
+    height: 7em;
+    margin-top: auto;
+}
+
+.emergency-button button {
+    height: 3em;
+    width: 8em;
+    margin: 0.4em;
+    color: red;
 }
 
 .new-fear-group {
@@ -373,6 +401,9 @@ form {
     left: 0;
     bottom: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 dialog::backdrop {

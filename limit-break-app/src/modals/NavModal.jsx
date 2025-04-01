@@ -91,6 +91,9 @@ function NavModal({ toggleNavModal }) {
                 </Link>
                 
             </div>
+            <div className="emergency-button">
+                <button>EMERGENCY</button>
+            </div>
             
             
         </dialog>,
