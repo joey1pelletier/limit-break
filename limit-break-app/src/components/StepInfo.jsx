@@ -153,7 +153,7 @@ function StepInfo({ id, name, q1, q2, q3, rating, isComplete, userId, fearId }) 
                             <span className="option">high</span>
                         </label>
                     </div>
-                    <p className="step-fear-text">Rating of High = Step Complete!</p>
+                    <p className="step-fear-text">A rating of 'high' will allow you to complete the step!</p>
                     <button type="button" disabled={selectedRating === "low" || selectedRating === "medium" || isStepComplete === true} onClick={handleCompleteChange}>
                         {isStepComplete ? "STEP COMPLETED!" : "COMPLETE STEP"}
                     </button>

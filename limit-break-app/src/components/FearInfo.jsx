@@ -151,7 +151,7 @@ function FearInfo({ id, name, q1, q2, q3, rating, isComplete, userId}) {
                             <span className="option">high</span>
                         </label>
                     </div>
-                    <p className="step-fear-text">Rating of High = Fear Complete!</p>
+                    <p className="step-fear-text">A rating of 'high' will allow you to complete the fear!</p>
                     <button type="button" disabled={selectedRating === "low" || selectedRating === "medium"} onClick={handleCompleteChange}>
                     {isFearComplete ? "FEAR COMPLETED!" : "COMPLETE FEAR"}
                     </button>
