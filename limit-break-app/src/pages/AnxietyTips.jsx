@@ -24,7 +24,10 @@ function AnxietyTips() {
         <div className="fear-step-title">
             <h2>ANXIETY TIPS</h2>
         </div>
-            <p className="resources-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eius tempora beatae, maiores, mollitia in soluta tenetur atque, modi totam ut labore est enim non facere. Aliquam veritatis quidem nemo.</p>
+            <p className="resources-text">​Managing anxiety and stress involves adopting various strategies to promote mental well-being. Engaging in regular physical activity, such as walking or yoga, can help reduce tension and improve mood. Maintaining a balanced diet and ensuring adequate sleep are also crucial for overall health and stress management. Additionally, practicing mindfulness or meditation can enhance relaxation and increase resilience against stressors.</p>
+            <p className="resources-text">Building a strong support system is essential in coping with anxiety. Connecting with friends, family, or support groups provides opportunities to share experiences and receive encouragement. Setting realistic goals and breaking tasks into manageable steps can prevent feelings of overwhelm. Learning to say no when necessary and prioritizing tasks can also help maintain a sense of control and reduce stress.</p>
+            <p className="resources-text">Incorporating relaxation techniques into daily routines can alleviate symptoms of anxiety. Deep breathing exercises, progressive muscle relaxation, or engaging in hobbies can serve as effective outlets for stress relief. Limiting exposure to stress-inducing stimuli, such as excessive news consumption or social media use, can further promote mental well-being. Seeking professional help when needed is a proactive step toward managing anxiety and developing personalized coping strategies.</p>
+            <p className="source">Source: Anxiety and Depression Association of America. (2025). Tips for Managing Anxiety and Stress. ADAA, https://adaa.org/tips</p>
         </div>
         </>
     )
