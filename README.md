@@ -417,6 +417,36 @@ Here's the following I still need to get done before 100% completion:
 
 - I will manage my time by spending 20+ hours per week on my project, along with making my weekends and spring break blocked off for that until capstone is done. At the latest, Everything from the checklist will need to be completed by March 31st. 
 
+## Week 10 and Spring Break Progress
+
+These were the final things I needed to get done for my project: 
+
+- Add tutorial pop-up for FearPage.jsx
+    -   Static pop-up that explains how to use the Conquer Your Fears feature
+- Adjust css for FearPage.jsx (make it look like Figma prototype). Adjust color pallete.
+- Position the back-button in FearInfo and StepInfo.jsx
+- make fears show up on 'Fears Conquered' page
+- Make completed fear and its steps disappear from FearPage.jsx
+- Add hamburger menu navbar (create as jsx component)
+- Add static pages for 'Explore Resources'
+- Add info for emergency pop-up (scrapping pdf feature...it will now be a stretch goal)
+    -   Lifeline and Helpline numbers
+    -   Link to CU Boulder CAPS
+    - Do additional research on what other apps have for an emergency feature
+- Make LogIn.jsx a well-designed page (no more ugly sign in button)
+- Position sign-out and display name better on Main Menu
+- Any bug fixes and feedback implementations during my experience with ap
+
+Although due to the app being far in the development process (hence there are some things that are difficult to change) plus time constraints, after some adjustments:
+- repositioned the back-button, but it's not at a fixed position
+- Added descriptions to certain parts of Fear and Step Info, rather than doing a pop-up tutorial
+- Alignment of fears and steps are different but similar to what it looks like to the Figma prototype
+
+...this project is now 100% complete. Everything I stated for my week 10 / spring break goals were accomplished. Not sure what the limits are for doing extra user-testing and feedback implementation, but I am feeling good on what I have right now.
+
+I learned that creating web apps (especially when connecting it to a database) is very, very tedious. But I am glad on what I have learned, and I can't wait to work on more web projects!
+
+
 
 
 
