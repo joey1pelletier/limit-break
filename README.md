@@ -446,6 +446,8 @@ Although due to the app being far in the development process (hence there are so
 
 I learned that creating web apps (especially when connecting it to a database) is very, very tedious. But I am glad on what I have learned, and I can't wait to work on more web projects!
 
+The app is deployed here: https://limit-break.vercel.app/
+
 
 
 
