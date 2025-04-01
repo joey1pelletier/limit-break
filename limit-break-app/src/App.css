@@ -345,6 +345,13 @@ h1 {
     padding: 1em 1em 0.5em 1em;
 }
 
+.resources-text {
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5em;
+    padding: 1em 10vw 0.5em 8vw;
+}
+
 .example-text {
     color: white;
     font-family: "Open Sans Condensed", sans-serif;
@@ -542,6 +549,13 @@ dialog::backdrop {
     align-items: center;
 }
 
+.resources-button {
+    background-color: #070707;
+    color: white;
+    border: 1px white solid;
+    height: 4em;
+}
+
 @media (max-width: 600px) {
     .nav-line {
         width: 1.1em;
@@ -591,5 +605,8 @@ dialog::backdrop {
     }
     .sign-out {
         font-size: 1.3em;
+    }
+    .emergency-text-area p{
+        font-size: 1.2em;
     }
 }
