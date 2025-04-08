@@ -457,6 +457,20 @@ These are the goals to complete by next week:
 
 As a note, after talking with Annie, you can show this at Expo with a video loop that shows the process and experience of app. If a user wants to, you can allow them to use the app as well (REALLYYYYY disclose that you can see the data they enter, so they should just play around with the app).
 
+## Week 11 Progress
+
+These were the goals to complete by this week:
+- Add a 'Remove Fear' option to 'Conquer Your Fears' and 'Fears Conquered' page.
+- Do some ideation on what your documentation/promo website for Limit Break will be. Use AI.
+- Think of quick walkthrough of app for video
+    - This can include a story with a more serious fear with step(s) being entered, followed by entering a comedic fear as well.
+
+This is what I got done:
+- I now have a 'Remove Fear' button when you click on a fear. I thought about adding the feature to 'Fears Conquered', but implementing it with the way my code is structured is pretty tricky. Plus, now that I thought about it, it wouldn't be necessary to add that page b/c it's supposed to be a track record of all the fears someone has conquered.
+- I tried AI to do my website, but I REALLY do not want to use the styling it uses. I'll just make a basic website that has similar styling to my capstone project.
+- I will have a rough storyboard completed before Capstone this week.
+
+
 
 
 
