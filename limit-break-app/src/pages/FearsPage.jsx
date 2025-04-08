@@ -1,7 +1,7 @@
 
 import '../App.css';
 import { useEffect, useState } from "react";
-import { collection, query, where, onSnapshot, orderBy } from 'firebase/firestore';
+import { collection, query, where, onSnapshot, orderBy, doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../firebase-config';
 import { UserAuth } from '../contexts/AuthContext';
 import StepInfo from '../components/StepInfo';
@@ -63,6 +63,19 @@ function FearsPage() {
         return () => unsubscribe();
 
     }, [user]);
+
+    const handleDeleteFear = async (fearId) => {
+
+        if(confirm("Are you sure you want to delete this fear?") === true) {
+            try {
+                await deleteDoc(doc(db, "fears", fearId));
+                setSelectedFear(false);
+            } catch (error) {
+                console.error("error deleting fear", error);
+            }
+        }
+        
+    }
 
     const handleStepClick = (step, fearId) => {
         setSelectedStep(step);
@@ -126,6 +139,7 @@ function FearsPage() {
             isComplete={selectedFear.isComplete}
             userId={user.uid}
         />
+       <button onClick={() => handleDeleteFear(selectedFear.id)} className="delete-button">DELETE FEAR</button>
         
     </div>
 ) : (

@@ -14,12 +14,14 @@ function StepPrompt({step, index, updateStep}) {
         
         <label htmlFor="fear" className="direction-text">Type in a step that will prepare you towards facing the fear.</label>
                         <div className="example-text">Example: To prepare for the fear of heights, look down from the top of a 1 floor building.</div>
+                        <div className="example-text">Character Limit: 40</div>
                         <textarea
                             placeholder="Enter your step here..."
                             className="text-input"
                             value={step.text}
                             onChange={handleTextChange}
                             required
+                            maxLength={50}
                         ></textarea>
 
                         <label htmlFor="confidence" className="direction-text">How confident are you with conquering this step?</label>

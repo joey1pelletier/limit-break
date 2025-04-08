@@ -172,12 +172,14 @@ useEffect(() => {
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="fear" className="direction-text">Type in the fear you want to conquer.</label>
                         <div className="example-text">Example: conquering the fear of heights</div>
+                        <div className="example-text">Character Limit: 50</div>
                         <textarea
                             placeholder="Enter your fear here..."
                             className="text-input"
                             value={userFear}
                             onChange={(e) => setUserFear(e.target.value)}
                             required
+                            maxLength={50}
                         ></textarea>
                         <label htmlFor="confidence" className="direction-text">How confident are you with conquering this fear?</label>
                         <div className="button-group">
