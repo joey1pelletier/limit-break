@@ -466,9 +466,11 @@ These were the goals to complete by this week:
     - This can include a story with a more serious fear with step(s) being entered, followed by entering a comedic fear as well.
 
 This is what I got done:
-- I now have a 'Remove Fear' button when you click on a fear. I thought about adding the feature to 'Fears Conquered', but implementing it with the way my code is structured is pretty tricky. Plus, now that I thought about it, it wouldn't be necessary to add that page b/c it's supposed to be a track record of all the fears someone has conquered.
+- (Implementing feedback from Anthony) I now have a 'Remove Fear' button when you click on a fear. I thought about adding the feature to 'Fears Conquered', but implementing it with the way my code is structured is pretty tricky. Plus, now that I thought about it, it wouldn't be necessary to add that page b/c it's supposed to be a track record of all the fears someone has conquered.
 - I tried AI to do my website, but I REALLY do not want to use the styling it uses. I'll just make a basic website that has similar styling to my capstone project.
 - I will have a rough storyboard completed before Capstone this week.
+
+I learned that adding new features to an app far in the development process, is painful. Oh well, it's part of life I guess.
 
 
 
