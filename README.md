@@ -472,6 +472,13 @@ This is what I got done:
 
 I learned that adding new features to an app far in the development process, is painful. Oh well, it's part of life I guess.
 
+## Week 12 Goals
+
+These are the goals to complete next week:
+- Re-iterate the elevator pitch. Must include how it's developed and how it works.
+- After elevator pitch re-iteration, use that to create a more fully-fledged storyboard (with better pictures and more specific events...)
+- Continue working on the Figma for the website. 
+
 
 
 
