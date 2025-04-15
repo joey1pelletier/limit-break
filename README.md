@@ -479,7 +479,20 @@ These are the goals to complete next week:
 - After elevator pitch re-iteration, use that to create a more fully-fledged storyboard (with better pictures and more specific events...)
 - Continue working on the Figma for the website. 
 
+## Week 12 Progress
 
+These were the goals to complete by this week:
+- Re-iterate the elevator pitch. Must include how it's developed and how it works.
+- After elevator pitch re-iteration, use that to create a more fully-fledged storyboard (with better pictures and more specific events...)
+- Continue working on the Figma for the website. 
+
+This is what I got done:
+- I re-iterated the elevator pitch, where it represents a rough draft of my script.
+- With the re-iterated elevator pitch, I will have a fully-fledged storyboard by the time I get to class.
+- I am making progress with the Figma mock-up of the website, but I am currently figuring out how to structure the "How It Works" part of the site. I am also not sure on what else I should include in the site, other than additional documentation. Maybe it will be figured out when we have Documentation Part 2 to do?
+
+
+SO far, I learned that creating a small chart for what my thing does is a bit tricky, considering this is different than the flow chart from RMPP. 
 
 
 
