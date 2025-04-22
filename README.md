@@ -494,12 +494,25 @@ This is what I got done:
 
 SO far, I learned that creating a small chart for what my thing does is a bit tricky, considering this is different than the flow chart from RMPP. 
 
-# Week 13 Goals
+## Week 13 Goals
 
 These are the goals to complete by next week:
 - Reduce the elevator pitch and remove story elements. Should be like a description of the project that you give to people at EXPO.
 - Figure out a good flow chart for the "How it Works" section of the website.
 - Get 5 high-qualty static media elements (could do a gif of the app in action, or do photos in general) and see if you can get a video asset for your project.
+
+## Week 13 Progress
+
+These were the goals to complete by this week: 
+- Reduce the elevator pitch and remove story elements. Should be like a description of the project that you give to people at EXPO.
+- Figure out a good flow chart for the "How it Works" section of the website.
+- Get 5 high-qualty static media elements (could do a gif of the app in action, or do photos in general) and see if you can get a video asset for your project.
+
+This is what I have done:
+- I believe I reduced the elevator pitch by a good amount. Instead of having a story, the pitch includes a basic overview of how the app works. 
+- I got a good enough flowchart to include on my site. My thought is to have it as an image, that way it won't look messy when reducing the screen size.
+- I found a tool that produces mock-ups for IPhone 15 and MacBook. My static elements are images with those mockups so far.
+
 
 
 
